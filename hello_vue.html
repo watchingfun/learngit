@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Vue</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{meg}}
+        <div v-if="see">dispaly</div>
+    </div>
+    <div class="ol-list">
+        <ol>
+            <li v-for="li in list">
+                {{li.str}}
+            </li>
+        </ol>
+    </div>
+</body>
+<script>
+     var app = new Vue({
+         el:'#app',
+         data:{
+            meg:"",
+            see: true
+         }
+     });
+     var list = new Vue({
+         el:'.ol-list',
+         data:{
+             list:[
+                    {'str':'learn vue'},
+                 
+             ]
+         }
+     })
+</script>
+<script>
+    app.meg="123";
+    app.see=false;
+</script>
+</html>
