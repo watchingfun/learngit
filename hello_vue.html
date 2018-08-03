@@ -24,25 +24,32 @@
     </div>
 </body>
 <script>
-     var app = new Vue({
-         el:'#app',
-         data:{
-            meg:"",
+    var app = new Vue({
+        el: '#app',
+        data: {
+            meg: "",
             see: true
-         }
-     });
-     var list = new Vue({
-         el:'.ol-list',
-         data:{
-             list:[
-                    {'str':'learn vue'},
-                 
-             ]
-         }
-     })
+        }
+    });
+    var list = new Vue({
+        el: '.ol-list',
+        data: {
+            list: [{
+                    'str': 'learn vue'
+                },
+                {
+                    str: 'learn git'
+                },
+                {
+                    'str': 'learn done!!'
+                },
+            ]
+        }
+    })
 </script>
 <script>
-    app.meg="123";
-    app.see=false;
+    app.meg = "123";
+    app.see = false;
 </script>
+
 </html>
